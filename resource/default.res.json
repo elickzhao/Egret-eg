@@ -1,0 +1,50 @@
+{
+	"groups": [
+		{
+			"keys": "bg_jpg,egret_icon_png,captain_png,hulk_png,superman_png,description_json,batman_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/egret_icon.png",
+			"type": "image",
+			"name": "egret_icon_png"
+		},
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/heros/captain.png",
+			"type": "image",
+			"name": "captain_png"
+		},
+		{
+			"url": "assets/heros/hulk.png",
+			"type": "image",
+			"name": "hulk_png"
+		},
+		{
+			"url": "assets/heros/superman.png",
+			"type": "image",
+			"name": "superman_png"
+		},
+		{
+			"url": "assets/heros/batman.png",
+			"type": "image",
+			"name": "batman_png"
+		},
+		{
+			"url": "assets/heros/batman.png",
+			"type": "image",
+			"name": "batman2_png"
+		}
+	]
+}
