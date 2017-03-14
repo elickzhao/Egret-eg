@@ -155,10 +155,11 @@ class Main extends egret.DisplayObjectContainer {
         var superman:egret.Bitmap = new egret.Bitmap(RES.getRes("superman_png"));
         superman.x = 270;
         superman.y = 20;
-        // superman.anchorOffsetX = 30;
-        // superman.anchorOffsetY = 40;
-        // superman.x += 30;
-        // superman.y += 40;
+        superman.anchorOffsetX = 30;
+        superman.anchorOffsetY = 40;
+        // 如果不修改位置的话,图片会这跟着锚点移动
+        superman.x += 30;
+        superman.y += 40;
         this.addChild(superman);
 
         var hulk:egret.Bitmap = new egret.Bitmap(RES.getRes("hulk_png"));
@@ -176,9 +177,16 @@ class Main extends egret.DisplayObjectContainer {
         var self = this;
         this.stage.addEventListener( egret.TouchEvent.TOUCH_TAP,function(){
             switch(++ self.times % 3){
-                case 0:break;
-                case 1:break;
-                case 2:break;
+                case 0:
+                    egret.Tween.get(batman).to({x:superman.x},300,egret.Ease.circIn);
+                    egret.Tween.get(superman).to({x:batman.x},300,egret.Ease.circIn);
+                    break;
+                case 1:
+                    egret.Tween.get(captain).to({alpha:.3},300,egret.Ease.circIn).to({alpha:1},300,egret.Ease.circIn);
+                    break;
+                case 2:
+                    egret.Tween.get(hulk).to({scaleX:.4,scaleY:.4},500,egret.Ease.circIn).to({scaleX:1,scaleY:1},500,egret.Ease.circIn);
+                    break;
             }
         },this);
 
