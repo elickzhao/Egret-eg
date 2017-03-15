@@ -180,6 +180,7 @@ class Main extends egret.DisplayObjectContainer {
                 case 0:
                     egret.Tween.get(batman).to({x:superman.x},300,egret.Ease.circIn);
                     egret.Tween.get(superman).to({x:batman.x},300,egret.Ease.circIn);
+                    channel.stop(); // 哦 在下面定义在上面也可用啊
                     break;
                 case 1:
                     //教程 说把音乐放在这 但我的测试音乐过长 不会自动结束 点击两次就会有两轨音乐
@@ -195,6 +196,22 @@ class Main extends egret.DisplayObjectContainer {
         var sound:egret.Sound = RES.getRes("bonus_mp3");   // 教程这里是错的 必须用的是命名名字 而不是资源名
         var channel:egret.SoundChannel = sound.play(0,1);
 
+        // 网络通信测试
+        // URL请求
+        var urlreq:egret.URLRequest = new egret.URLRequest("http://httpbin.org/user-agent");
+        console.log(urlreq);    // 这里返回的是个信息集合对象 用URLLoader 可以解析出内容
+
+        var urlloader:egret.URLLoader = new egret.URLLoader();
+        urlloader.addEventListener(egret.Event.COMPLETE,function(evt:egret.Event):void{
+            console.log(evt.target.data);
+        },this);
+        // 上面的监听时间就是监听这个,当这个读取事件完成的时候,进行上面的处理
+        // 如果没有这句的话,上面也不会执行,这个是经过验证的 呵呵
+        // 这个解析的速度会比上面直接打印 urlreq 慢一些
+        urlloader.load(urlreq); 
+
+        // websocket通信
+        
     }
     private touchHandler (evt:egret.TouchEvent):void{
         var tx:egret.TextField = evt.currentTarget;
