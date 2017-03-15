@@ -112,6 +112,7 @@ class Main extends egret.DisplayObjectContainer {
 
     private textfield: egret.TextField;
     private times:number;
+    private webSocket:egret.WebSocket;
 
     /**
      * 创建游戏场景
@@ -211,8 +212,24 @@ class Main extends egret.DisplayObjectContainer {
         urlloader.load(urlreq); 
 
         // websocket通信
-        
+        // 简单解析细下面,有时代码需要倒着看啊, 先定义了监听各种状态处理, 联接成功状态和发送信息状态(SOCKET_DATA), 当状态触发时,处理后续结果
+        this.webSocket = new egret.WebSocket();
+        this.webSocket.addEventListener(egret.ProgressEvent.SOCKET_DATA,this.onReceiveMessage,this); // 发送信息后会触发这个状态,然后读取信息
+        this.webSocket.addEventListener(egret.Event.CONNECT,this.onSocketOpen,this); // 联接成功 就发送信息
+        this.webSocket.connect("echo.websocket.org",80);    // 测试联接 用于测试websocket是否可用
     }
+
+    private onReceiveMessage(e:egret.Event):void{
+        var msg = this.webSocket.readUTF();
+        console.log("Receive data:" + msg);
+    }
+
+    private onSocketOpen():void{
+        var cmd = "Hello Egret WebSocket";
+        console.log("The connection is successful,send data:"+cmd);
+        this.webSocket.writeUTF(cmd);
+    }
+
     private touchHandler (evt:egret.TouchEvent):void{
         var tx:egret.TextField = evt.currentTarget;
         this.removeChild(tx);
