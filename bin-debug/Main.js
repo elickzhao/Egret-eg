@@ -163,6 +163,7 @@ var Main = (function (_super) {
                     egret.Tween.get(superman).to({ x: batman.x }, 300, egret.Ease.circIn);
                     break;
                 case 1:
+                    //教程 说把音乐放在这 但我的测试音乐过长 不会自动结束 点击两次就会有两轨音乐
                     egret.Tween.get(captain).to({ alpha: .3 }, 300, egret.Ease.circIn).to({ alpha: 1 }, 300, egret.Ease.circIn);
                     break;
                 case 2:
@@ -170,6 +171,9 @@ var Main = (function (_super) {
                     break;
             }
         }, this);
+        // 播放音乐
+        var sound = RES.getRes("bonus_mp3"); // 教程这里是错的 必须用的是命名名字 而不是资源名
+        var channel = sound.play(0, 1);
     };
     Main.prototype.touchHandler = function (evt) {
         var tx = evt.currentTarget;

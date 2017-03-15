@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,captain_png,hulk_png,superman_png,description_json,batman_png",
+			"keys": "bg_jpg,egret_icon_png,captain_png,hulk_png,superman_png,description_json,batman_png,bonus_mp3",
 			"name": "preload"
 		}
 	],
@@ -45,6 +45,11 @@
 			"url": "assets/heros/batman.png",
 			"type": "image",
 			"name": "batman2_png"
+		},
+		{
+			"url": "assets/bonus.mp3",
+			"type": "sound",
+			"name": "bonus_mp3"
 		}
 	]
 }

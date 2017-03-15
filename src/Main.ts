@@ -182,6 +182,7 @@ class Main extends egret.DisplayObjectContainer {
                     egret.Tween.get(superman).to({x:batman.x},300,egret.Ease.circIn);
                     break;
                 case 1:
+                    //教程 说把音乐放在这 但我的测试音乐过长 不会自动结束 点击两次就会有两轨音乐
                     egret.Tween.get(captain).to({alpha:.3},300,egret.Ease.circIn).to({alpha:1},300,egret.Ease.circIn);
                     break;
                 case 2:
@@ -189,6 +190,10 @@ class Main extends egret.DisplayObjectContainer {
                     break;
             }
         },this);
+
+        // 播放音乐
+        var sound:egret.Sound = RES.getRes("bonus_mp3");   // 教程这里是错的 必须用的是命名名字 而不是资源名
+        var channel:egret.SoundChannel = sound.play(0,1);
 
     }
     private touchHandler (evt:egret.TouchEvent):void{
