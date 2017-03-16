@@ -137,7 +137,7 @@ class Main extends egret.DisplayObjectContainer {
         tx.x = 20;
         tx.y = 20;
         tx.width = this.stage.stageWidth - 40; //设置字体宽度否则就会在一行显示
-        tx.$touchEnabled = true;
+        tx.touchEnabled = true;
         tx.addEventListener(egret.TouchEvent.TOUCH_TAP,this.touchHandler,this); // 1,点击对象 2,回调函数 3,传入egret对象.
         this.addChild(tx);
 
