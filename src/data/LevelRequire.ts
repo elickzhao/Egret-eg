@@ -1,5 +1,5 @@
 class LevelRequire {
-	public reqElements: LevelRequireElement[];	// 过关条件 需要清楚元素的数组
+	public reqElements: LevelRequireElement[];	// 过关条件 需要清除元素的数组
 
 	public constructor() {
 		this.reqElements = [];

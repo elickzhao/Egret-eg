@@ -5,7 +5,7 @@ class GameData {
 	public static stepNum: number = 0;		//当前玩家剩余步数
 	public static levelStepNum: number = 0;	//过关需要的最大步数
 	public static elementTypes: number[];	//当前关卡出现的类型
-	public static levelreq: LevelRequire;	//过关条件,就是需要消除不同类型元素的数量
+	public static levelreq: LevelRequire;	//过关条件,就是需要消除不同类型元素的数量 还有一些操作方法
 	public static elements: GameElement[];	//游戏元素对象池 //8*8最长64
 	public static unusedElements: number[]; //未使用的元素
 	public static levelBackgroundImageName: string = "";	//当前关卡背景图
