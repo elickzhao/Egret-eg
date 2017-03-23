@@ -21,7 +21,7 @@ class GameData {
 			var arr:number[] = [];	//他这里有问题 这个没用到不说 下面也是一维数组 但定义的时候是二维的 
 			for (var j = 0; j < GameData.MaxColumn; j++) {
 				// 地图填充的都是元素id,初始化时 -1 为地图块不可用 -2 为可用,但未放置元素
-				GameData.mapData[j].push(-2);	// 所以初始化的时候 把所有地图块设置为-2
+				 GameData.mapData[j].push(-2);	// 所以初始化的时候 把所有地图块设置为-2
 			}
 		}
 
