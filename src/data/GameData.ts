@@ -21,8 +21,13 @@ class GameData {
 			var arr:number[] = [];	//他这里有问题 这个没用到不说 下面也是一维数组 但定义的时候是二维的 
 			for (var j = 0; j < GameData.MaxColumn; j++) {
 				// 地图填充的都是元素id,初始化时 -1 为地图块不可用 -2 为可用,但未放置元素
-				 GameData.mapData[j].push(-2);	// 所以初始化的时候 把所有地图块设置为-2
+				 //GameData.mapData[j].push(-2);	// 所以初始化的时候 把所有地图块设置为-2	//有可能不是 j 而是 i GameData.mapData[i].push(-2);
+				 //GameData.mapData[i][j] = -2;	//我感觉应该这么写 // 恩这句应该和 GameData.mapData[i].push(-2); 等同 因为都是数字下标从0开始
+				// arr.push(-2);	//或者这么写
+
+				GameData.mapData[i].push(-2); //还是基于作者的写吧
 			}
+			//GameData.mapData.push(arr);
 		}
 
 		GameData.levelreq = new LevelRequire();	//关卡
