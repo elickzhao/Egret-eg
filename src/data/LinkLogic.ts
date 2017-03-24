@@ -1,5 +1,7 @@
 class LinkLogic {
+
 	public static lines: number[][];
+	//判断是否有消除的元素
 	public static isHaveLine(): boolean {
 		LinkLogic.lines = [];
 		var currentType: string = "";
@@ -104,5 +106,82 @@ class LinkLogic {
 		} else {
 			return false;
 		}
+	}
+
+	// 是否无法消除,刷新地图
+	public static isNextHaveLine(): boolean {
+		for (var i = 0; i < GameData.MaxRow; i++) {
+			for (var j = 0; j < GameData.MaxColumn; j++) {
+				if (GameData.mapData[i][j] != -1) {
+					if (j < (GameData.MaxColumn - 1) && GameData.mapData[i][j + 1]! - 1 && GameData.elements[GameData.mapData[i][j]].type == GameData.elements[GameData.mapData[i][j + 1]].type) {
+						if (j > 0 && GameData.mapData[i][j - 1] != -1) {
+							//左侧三个方块  
+							// 左上
+							if (i > 0 && j > 0 && GameData.mapData[i - 1][j - 1] && GameData.mapData[i - 1][j - 1] != -1 && GameData.elements[GameData.mapData[i - 1][j - 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+							//这是从右边界往里数两个格子  左下
+							if (i < (GameData.MaxRow - 1) && j > 0 && GameData.mapData[i + 1][j - 1] && GameData.mapData[i + 1][j - 1] != -1 && GameData.elements[GameData.mapData[i + 1][j - 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+							//这个是同行 往外数两列  左侧
+							if (j > 1 && GameData.mapData[i][j - 2] && GameData.mapData[i - 1][j - 2] && GameData.mapData[i - 1][j - 2] != -1 && GameData.elements[GameData.mapData[i - 1][j - 2]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+						}
+						if (j > (GameData.MaxColumn - 1) && GameData.mapData[i][j + 2] != -1) {
+							//右侧三个方块  
+							// 右上	加2是这个原因啊  因为是当前位置 而且必须下一个横向位置与当前位置类型相同  所以必须跳过下一个位置 也就是两个相同元素并列 现在的当前位置是左侧第一个元素
+							if (j < (GameData.MaxColumn - 2) && i > 0 && GameData.mapData[i - 1][j + 2] && GameData.mapData[i - 1][j + 2] != -1 && GameData.elements[GameData.mapData[i - 1][j + 2]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+							//这是从右边界往里数两个格子  右下
+							if (j < (GameData.MaxColumn - 2) && i < (GameData.MaxRow - 1) && GameData.mapData[i + 1][j + 2] && GameData.mapData[i + 1][j + 2] != -1 && GameData.elements[GameData.mapData[i + 1][j + 2]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+							//这个是同行 往外数两列  右侧
+							if (j < (GameData.MaxColumn - 3) && GameData.mapData[i][j + 3] && GameData.mapData[i][j + 3] != -1 && GameData.elements[GameData.mapData[i][j + 3]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+						}
+					}
+					// 纵向判断
+					if (i < (GameData.MaxRow - 1) && GameData.mapData[i + 1][j] != -1 && GameData.elements[GameData.mapData[i][j]].type == GameData.elements[GameData.mapData[i + 1][j]].type) {
+						if (i > 0 && GameData.mapData[i - 1][j] != -1) {
+							//上方三个方块  
+							// 前
+							if (i > 1 && GameData.mapData[i - 2][j] && GameData.mapData[i - 2][j] != -1 && GameData.elements[GameData.mapData[i - 2][j]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+							//左
+							if (i > 0 && j > 0 && GameData.mapData[i - 1][j - 1] && GameData.mapData[i - 1][j - 1] && GameData.mapData[i - 1][j - 1] != -1 && GameData.elements[GameData.mapData[i - 1][j - 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+							//右
+							if (i > 0 && j < (GameData.MaxColumn - 1) && GameData.mapData[i - 1][j + 1] && GameData.mapData[i - 1][j + 1] != -1 && GameData.elements[GameData.mapData[i - 1][j + 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+						}
+						if (i < (GameData.MaxRow - 2) && GameData.mapData[i + 2][j] != -1) {
+							//下方三个方块  
+							// 左
+							if (j > 0 && GameData.mapData[i + 2][j - 1] && GameData.mapData[i + 2][j - 1] != -1 && GameData.elements[GameData.mapData[i + 2][j - 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+							//右	 //这里他写的是 GameData.MaxColumn - 2 我有点疑问 我觉得是 -1
+							if (j < (GameData.MaxColumn - 1) && GameData.mapData[i + 2][j + 1] && GameData.mapData[i + 2][j + 1] != -1 && GameData.elements[GameData.mapData[i + 2][j + 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+							//后
+							if (i < (GameData.MaxRow - 3) && GameData.mapData[i + 3][j] && GameData.mapData[i + 3][j] != -1 && GameData.elements[GameData.mapData[i + 3][j]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								return true;
+							}
+						}
+					}
+					//XXX 方式二
+				}
+			}
+		}
+		return false;
 	}
 }
