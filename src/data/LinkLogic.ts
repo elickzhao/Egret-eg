@@ -179,6 +179,36 @@ class LinkLogic {
 						}
 					}
 					//XXX 方式二
+					//横向右侧相隔一个方块的类型是否相同
+					if (j < (GameData.MaxColumn - 2) && GameData.mapData[i][j + 2] != -1 && GameData.elements[GameData.mapData[i][j]].type == GameData.elements[GameData.mapData[i][j + 2]].type) {
+						//中间这个格子是可用的
+						if (GameData.mapData[i][j + 1] != -1) {
+							if (i > 0 && GameData.mapData[i - 1][j + 1] && GameData.mapData[i - 1][j + 1] != -1 && GameData.elements[GameData.mapData[i - 1][j + 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								console.log("-2能消除项目1!!!", i, j);
+								return true;
+							}
+							// 因为需要+1 所以必须 GameData.MaxRow - 1 要不该加出界外了
+							if (i < (GameData.MaxRow - 1) && GameData.mapData[i + 1][j + 1] && GameData.mapData[i + 1][j + 1] != -1 && GameData.elements[GameData.mapData[i + 1][j + 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								console.log("-2能消除项目1!!!", i, j);
+								return true;
+							}
+						}
+					}
+					if (i < (GameData.MaxRow - 2) && GameData.mapData[i + 2][j] != -1 && GameData.elements[GameData.mapData[i][j]].type == GameData.elements[GameData.mapData[i + 2][j]].type) {
+						//中间这个格子是可用的
+						if (GameData.mapData[i + 1][j] != -1) {
+							// 下面 i < (GameData.MaxRow - 1) 好像是可以不写的 是因为上面的条件  i < (GameData.MaxRow - 2)  必然 i < (GameData.MaxRow - 1) 但是作者写了 先留着吧
+							if (i < (GameData.MaxRow - 1) && j > 0 && GameData.mapData[i + 1][j - 1] && GameData.mapData[i + 1][j - 1] != -1 && GameData.elements[GameData.mapData[i + 1][j - 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								console.log("-2能消除项目1!!!", i, j);
+								return true;
+							}
+							// 因为需要+1 所以必须 GameData.MaxColumn - 1 要不该加出界外了 i 是因为上面的条件  GameData.MaxRow - 2) 所以不用在约定了
+							if (j < (GameData.MaxColumn - 1) && GameData.mapData[i + 1][j + 1] && GameData.mapData[i + 1][j + 1] != -1 && GameData.elements[GameData.mapData[i + 1][j + 1]].type == GameData.elements[GameData.mapData[i][j]].type) {
+								console.log("-2能消除项目1!!!", i, j);
+								return true;
+							}
+						}
+					}
 				}
 			}
 		}
