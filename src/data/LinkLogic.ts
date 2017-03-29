@@ -214,4 +214,30 @@ class LinkLogic {
 		}
 		return false;
 	}
+
+	//判断是否能交换位置 只要位置相邻 就可以移动
+	public static canMove(id1:number,id2:number):boolean{
+		//id为初始时排序位置与location相同,不过随着游戏进行 方块不停移动, location将不断变化 但id将是唯一的 所以不能作为位置信息
+		var l1row:number = Math.floor(GameData.elements[id1].location/GameData.MaxRow);
+		var l1col:number = GameData.elements[id1].location & GameData.MaxColumn;
+
+		var l2row:number = Math.floor(GameData.elements[id2].location/GameData.MaxRow);
+		var l2col:number = GameData.elements[id2].location & GameData.MaxColumn;
+
+		//行相同
+		if(l1row == l2row){
+			if(Math.abs(l1col - l2col) == 1){
+				return true;
+			}
+		}
+
+		//列相同
+		if(l1col == l2col){
+			if(Math.abs(l1row - l2row) == 1){
+				return true;
+			}
+		}
+
+		return false;
+	}
 }
