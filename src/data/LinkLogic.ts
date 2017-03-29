@@ -216,28 +216,50 @@ class LinkLogic {
 	}
 
 	//判断是否能交换位置 只要位置相邻 就可以移动
-	public static canMove(id1:number,id2:number):boolean{
+	public static canMove(id1: number, id2: number): boolean {
 		//id为初始时排序位置与location相同,不过随着游戏进行 方块不停移动, location将不断变化 但id将是唯一的 所以不能作为位置信息
-		var l1row:number = Math.floor(GameData.elements[id1].location/GameData.MaxRow);
-		var l1col:number = GameData.elements[id1].location & GameData.MaxColumn;
+		var l1row: number = Math.floor(GameData.elements[id1].location / GameData.MaxRow);
+		var l1col: number = GameData.elements[id1].location & GameData.MaxColumn;
 
-		var l2row:number = Math.floor(GameData.elements[id2].location/GameData.MaxRow);
-		var l2col:number = GameData.elements[id2].location & GameData.MaxColumn;
+		var l2row: number = Math.floor(GameData.elements[id2].location / GameData.MaxRow);
+		var l2col: number = GameData.elements[id2].location & GameData.MaxColumn;
 
 		//行相同
-		if(l1row == l2row){
-			if(Math.abs(l1col - l2col) == 1){
+		if (l1row == l2row) {
+			if (Math.abs(l1col - l2col) == 1) {
 				return true;
 			}
 		}
 
 		//列相同
-		if(l1col == l2col){
-			if(Math.abs(l1row - l2row) == 1){
+		if (l1col == l2col) {
+			if (Math.abs(l1row - l2row) == 1) {
 				return true;
 			}
 		}
 
 		return false;
+	}
+
+	//全局乱序算法
+	public static changeOrder() {
+		var arr: number[] = [];
+		for (var i = 0; i < GameData.MaxRow; i++) {
+			for (var j = 0; j < GameData.MaxColumn; j++) {
+				if (GameData.mapData[i][j] != -1) {
+					arr.push(GameData.mapData[i][j]);
+				}
+			}
+		}
+		var index: number = 0;
+		for (var i = 0; i < GameData.MaxRow; i++) {
+			for (var j = 0; j < GameData.MaxColumn; j++) {
+				index = Math.floor(Math.random() * arr.length);	//Math.random()是产生一个0~1的随机数 所以乘以几 就是0~几的随机数
+				GameData.mapData[i][j] = arr[index];	//把随机一个数组位置放入当前位置.
+				GameData.elements[arr[index]].location = i * GameData.MaxRow + j;		//所移动的元素的位置,应与地图位置相符
+				//arr.slice(index,i);	//选取元素 slice(开始位置,结束位置) 	//这个不对把这是选取又不是删除数组中元素啊
+				arr.splice(index,1);  	// 应该是作者写错了, splice(开始位置,要删除个数,替换元素[可选]) 这个是删除后返回原数组 而slicen()根本不改变原数组 而是将选取赋予一个变量才行 var arr1 = arr.slicen(1,2);
+			}
+		}
 	}
 }
