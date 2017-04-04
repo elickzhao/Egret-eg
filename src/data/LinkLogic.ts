@@ -263,6 +263,7 @@ class LinkLogic {
 		}
 	}
 
+	//交换后判断消除
 	public static isHaveLineByIndex(p1: number, p2: number): boolean {
 		//说是暂存 但是下面根本没用到
 		var p1n: number = p1;
