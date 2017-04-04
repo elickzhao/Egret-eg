@@ -258,8 +258,37 @@ class LinkLogic {
 				GameData.mapData[i][j] = arr[index];	//把随机一个数组位置放入当前位置.
 				GameData.elements[arr[index]].location = i * GameData.MaxRow + j;		//所移动的元素的位置,应与地图位置相符
 				//arr.slice(index,i);	//选取元素 slice(开始位置,结束位置) 	//这个不对把这是选取又不是删除数组中元素啊
-				arr.splice(index,1);  	// 应该是作者写错了, splice(开始位置,要删除个数,替换元素[可选]) 这个是删除后返回原数组 而slicen()根本不改变原数组 而是将选取赋予一个变量才行 var arr1 = arr.slicen(1,2);
+				arr.splice(index, 1);  	// 应该是作者写错了, splice(开始位置,要删除个数,替换元素[可选]) 这个是删除后返回原数组 而slicen()根本不改变原数组 而是将选取赋予一个变量才行 var arr1 = arr.slicen(1,2);
 			}
 		}
+	}
+
+	public static isHaveLineByIndex(p1: number, p2: number): boolean {
+		//说是暂存 但是下面根本没用到
+		var p1n: number = p1;
+		var p2n: number = p2;
+		//获取p1元素id
+		var p1id: number = GameData.mapData[Math.floor(p1 / GameData.MaxColumn)][p1 % GameData.MaxRow];
+		//获取p12素id
+		var p2id: number = GameData.mapData[Math.floor(p2 / GameData.MaxColumn)][p2 % GameData.MaxRow];
+
+		//两个元素交换数值  //所以位置也就交换了  //改变地图上元素的数值
+		GameData.mapData[Math.floor(p1 / GameData.MaxColumn)][p1 % GameData.MaxRow] = p2id;
+		GameData.mapData[Math.floor(p2 / GameData.MaxColumn)][p2 % GameData.MaxRow] = p1id;
+
+		//判断改变数值后 是否能消除	
+		var rel: boolean = LinkLogic.isHaveLine();
+		if (rel) {
+			//如果能正常连线的话,就把元素的location属性进行改变.  p1的变成p2的 必须保持地图与元素location对应
+			GameData.elements[p1id].location = p2;
+			GameData.elements[p2id].location = p1;
+			return true;
+		} else {
+			//不能交换就返回原来位置
+			GameData.mapData[Math.floor(p1 / GameData.MaxColumn)][p1 % GameData.MaxRow] = p1id;
+			GameData.mapData[Math.floor(p2 / GameData.MaxColumn)][p2 % GameData.MaxRow] = p2id;
+		}
+
+		return false;
 	}
 }
