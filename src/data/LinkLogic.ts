@@ -101,7 +101,8 @@ class LinkLogic {
 			typeNum = 0;
 		}
 
-		if (LinkLogic.length != 0) {
+		//这里原来应该是写错了,应该是判断数组是否有长度
+		if (LinkLogic.lines.length != 0) {
 			return true;
 		} else {
 			return false;
