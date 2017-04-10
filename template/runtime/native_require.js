@@ -10,8 +10,18 @@ var game_file_list = [
 	"libs/modules/socket/socket.js",
 	"libs/modules/eui/eui.js",
 	"polyfill/promise.js",
+	"bin-debug/data/element/BaseElement.js",
+	"bin-debug/view/GameBackGround.js",
+	"bin-debug/data/element/LevelRequireElement.js",
+	"bin-debug/data/GameData.js",
+	"bin-debug/data/LevelGameDataParse.js",
+	"bin-debug/data/LevelRequire.js",
+	"bin-debug/data/element/GameElement.js",
+	"bin-debug/data/MapDataPares.js",
+	"bin-debug/data/PropLogic.js",
 	"bin-debug/LoadingUI.js",
 	"bin-debug/Main.js",
+	"bin-debug/data/LinkLogic.js",
 	//----auto game_file_list end----
 ];
 
