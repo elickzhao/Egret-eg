@@ -3,6 +3,10 @@
 		{
 			"keys": "bg_jpg,egret_icon_png,captain_png,hulk_png,superman_png,description_json,batman_png,bonus_mp3,l1_json",
 			"name": "preload"
+		},
+		{
+			"keys": "00001[64x64x8BPP]_png,00002[64x64x8BPP]_png,00003[64x64x8BPP]_png,00004[128x128x8BPP]_png,00005[512x512x8BPP]_png,00006[64x64x8BPP]_png,00007[32x32x8BPP]_png,00008[32x32x8BPP]_png,00009[64x64x8BPP]_png,00010[64x64x8BPP]_png,00011[32x32x8BPP]_png,00012[128x128x8BPP]_png,00013[64x64x8BPP]_png,00014[128x128x8BPP]_png,00015[128x128x8BPP]_png,00016[64x128x8BPP]_png,00017[32x32x8BPP]_png,00018[256x128x8BPP]_png,00019[256x128x8BPP]_png,00020[512x256x8BPP]_png,00021[512x256x8BPP]_png,00022[256x512x8BPP]_png,00023[1024x1024x8BPP]_png,00024[256x256x8BPP]_png,00025[1024x512x8BPP]_png,00026[1024x512x8BPP]_png,00027[1024x512x8BPP]_png,00028[1024x512x8BPP]_png,00029[512x512x8BPP]_png,00030[256x512x8BPP]_png,00031[512x512x8BPP]_png,00032[512x512x8BPP]_png,00033[256x512x8BPP]_png,00034[256x256x8BPP]_png,00035[512x512x8BPP]_png,00036[140x140x8BPP]_png,00037[140x140x8BPP]_png,00038[140x140x8BPP]_png,00039[140x140x8BPP]_png,00040[140x140x8BPP]_png,00041[140x140x8BPP]_png,00042[140x140x8BPP]_png,00043[140x140x8BPP]_png,00044[140x140x8BPP]_png,00045[140x140x8BPP]_png,00046[140x140x8BPP]_png,00047[140x140x8BPP]_png,00048[140x140x8BPP]_png,00049[140x140x8BPP]_png,00050[140x140x8BPP]_png,00051[140x140x8BPP]_png,00052[140x140x8BPP]_png,00053[140x140x8BPP]_png,00054[140x140x8BPP]_png,00055[140x140x8BPP]_png,00056[140x140x8BPP]_png,00057[140x140x8BPP]_png,00058[140x140x8BPP]_png,00059[140x140x8BPP]_png,00060[140x140x8BPP]_png,00061[140x140x8BPP]_png,00062[140x140x8BPP]_png,00063[1024x1024x8BPP]_png,00064[1024x1024x8BPP]_png,00065[512x256x8BPP]_png,00066[1024x512x8BPP]_png,00067[1024x1024x8BPP]_png,00068[512x512x8BPP]_png,00069[1024x1024x8BPP]_png,00070[256x256x8BPP]_png,00071[32x32x8BPP]_png,00072[1024x512x8BPP]_png,00073[1024x512x8BPP]_png,00074[1024x512x8BPP]_png,00075[1024x512x8BPP]_png,00076[512x512x8BPP]_png,00077[512x512x8BPP]_png,00078[1024x1024x8BPP]_png,00079[1024x1024x8BPP]_png,00080[512x512x8BPP]_png,00081[512x256x8BPP]_png,00082[512x512x8BPP]_png,00083[512x512x8BPP]_png,00084[1024x512x8BPP]_png,00085[512x512x8BPP]_png,00086[1024x1024x8BPP]_png,00087[1024x1024x8BPP]_png,00088[1024x1024x8BPP]_png,00089[1024x1024x8BPP]_png,00090[1024x1024x8BPP]_png,00091[128x256x8BPP]_png,00092[128x256x8BPP]_png,00093[512x256x8BPP]_png,00094[256x512x8BPP]_png,00095[512x512x8BPP]_png,00096[512x512x8BPP]_png,00097[512x256x8BPP]_png,00098[1024x1024x8BPP]_png,00099[64x512x8BPP]_png,00100[64x512x8BPP]_png,00101[128x128x8BPP]_png,00102[1024x512x8BPP]_png,00103[1024x1024x8BPP]_png,00104[1024x1024x8BPP]_png,00105[1024x1024x8BPP]_png,00106[1024x1024x8BPP]_png,00107[256x256x8BPP]_png,00108[256x256x8BPP]_png,00109[256x256x8BPP]_png,00110[256x256x8BPP]_png,00111[256x256x8BPP]_png,00112[256x256x8BPP]_png,00113[256x256x8BPP]_png,00114[256x256x8BPP]_png,00115[256x256x8BPP]_png,00116[256x256x8BPP]_png,00117[256x256x8BPP]_png,00118[256x256x8BPP]_png,00119[256x256x8BPP]_png,00120[256x256x8BPP]_png,00121[256x256x8BPP]_png,00122[256x256x8BPP]_png,00123[256x256x8BPP]_png,00124[256x256x8BPP]_png,00125[256x256x8BPP]_png,00126[1024x512x8BPP]_png,00127[256x256x8BPP]_png,00128[1024x512x8BPP]_png,00129[1024x1024x8BPP]_png,00130[1024x512x8BPP]_png,00131[512x512x8BPP]_png,00132[512x512x8BPP]_png,00133[256x128x8BPP]_png,00134[1024x1024x8BPP]_png,00135[1024x512x8BPP]_png,00136[512x512x8BPP]_png,00137[1024x1024x8BPP]_png,00138[1024x1024x8BPP]_png,00139[1024x1024x8BPP]_png,00140[512x512x8BPP]_png,00141[1024x512x8BPP]_png,00142[512x512x8BPP]_png,00143[1024x512x8BPP]_png,00144[1024x1024x8BPP]_png,00145[256x256x8BPP]_png,00146[64x64x8BPP]_png,00147[64x64x8BPP]_png,00156[72x72x8BPP]_png,00157[18x78x8BPP]_png,00158[18x78x8BPP]_png,00159[18x78x8BPP]_png,00160[18x78x8BPP]_png,00161[76x76x8BPP]_png,00162[72x72x8BPP]_png,00163[280x150x8BPP]_png,00164[280x150x8BPP]_png,00165[280x150x8BPP]_png,00166[280x150x8BPP]_png,00167[280x150x8BPP]_png,00168[280x150x8BPP]_png,00169[280x150x8BPP]_png,00170[280x150x8BPP]_png,00171[280x150x8BPP]_png,00172[280x150x8BPP]_png,00173[640x960x8BPP]_png,00244[72x95x8BPP]_png,00245[72x95x8BPP]_png",
+			"name": "game"
 		}
 	],
 	"resources": [
@@ -52,9 +56,844 @@
 			"name": "bonus_mp3"
 		},
 		{
-			"name": "l1_json",
+			"url": "res/l1.json",
 			"type": "json",
-			"url": "res/l1.json"
+			"name": "l1_json"
+		},
+		{
+			"url": "assets/game/00001[64x64x8BPP].png",
+			"type": "image",
+			"name": "00001[64x64x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00002[64x64x8BPP].png",
+			"type": "image",
+			"name": "00002[64x64x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00003[64x64x8BPP].png",
+			"type": "image",
+			"name": "00003[64x64x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00004[128x128x8BPP].png",
+			"type": "image",
+			"name": "00004[128x128x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00005[512x512x8BPP].png",
+			"type": "image",
+			"name": "00005[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00006[64x64x8BPP].png",
+			"type": "image",
+			"name": "00006[64x64x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00007[32x32x8BPP].png",
+			"type": "image",
+			"name": "00007[32x32x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00008[32x32x8BPP].png",
+			"type": "image",
+			"name": "00008[32x32x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00009[64x64x8BPP].png",
+			"type": "image",
+			"name": "00009[64x64x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00010[64x64x8BPP].png",
+			"type": "image",
+			"name": "00010[64x64x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00011[32x32x8BPP].png",
+			"type": "image",
+			"name": "00011[32x32x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00012[128x128x8BPP].png",
+			"type": "image",
+			"name": "00012[128x128x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00013[64x64x8BPP].png",
+			"type": "image",
+			"name": "00013[64x64x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00014[128x128x8BPP].png",
+			"type": "image",
+			"name": "00014[128x128x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00015[128x128x8BPP].png",
+			"type": "image",
+			"name": "00015[128x128x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00016[64x128x8BPP].png",
+			"type": "image",
+			"name": "00016[64x128x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00017[32x32x8BPP].png",
+			"type": "image",
+			"name": "00017[32x32x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00018[256x128x8BPP].png",
+			"type": "image",
+			"name": "00018[256x128x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00019[256x128x8BPP].png",
+			"type": "image",
+			"name": "00019[256x128x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00020[512x256x8BPP].png",
+			"type": "image",
+			"name": "00020[512x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00021[512x256x8BPP].png",
+			"type": "image",
+			"name": "00021[512x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00022[256x512x8BPP].png",
+			"type": "image",
+			"name": "00022[256x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00023[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00023[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00024[256x256x8BPP].png",
+			"type": "image",
+			"name": "00024[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00025[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00025[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00026[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00026[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00027[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00027[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00028[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00028[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00029[512x512x8BPP].png",
+			"type": "image",
+			"name": "00029[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00030[256x512x8BPP].png",
+			"type": "image",
+			"name": "00030[256x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00031[512x512x8BPP].png",
+			"type": "image",
+			"name": "00031[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00032[512x512x8BPP].png",
+			"type": "image",
+			"name": "00032[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00033[256x512x8BPP].png",
+			"type": "image",
+			"name": "00033[256x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00034[256x256x8BPP].png",
+			"type": "image",
+			"name": "00034[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00035[512x512x8BPP].png",
+			"type": "image",
+			"name": "00035[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00036[140x140x8BPP].png",
+			"type": "image",
+			"name": "00036[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00037[140x140x8BPP].png",
+			"type": "image",
+			"name": "00037[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00038[140x140x8BPP].png",
+			"type": "image",
+			"name": "00038[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00039[140x140x8BPP].png",
+			"type": "image",
+			"name": "00039[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00040[140x140x8BPP].png",
+			"type": "image",
+			"name": "00040[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00041[140x140x8BPP].png",
+			"type": "image",
+			"name": "00041[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00042[140x140x8BPP].png",
+			"type": "image",
+			"name": "00042[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00043[140x140x8BPP].png",
+			"type": "image",
+			"name": "00043[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00044[140x140x8BPP].png",
+			"type": "image",
+			"name": "00044[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00045[140x140x8BPP].png",
+			"type": "image",
+			"name": "00045[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00046[140x140x8BPP].png",
+			"type": "image",
+			"name": "00046[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00047[140x140x8BPP].png",
+			"type": "image",
+			"name": "00047[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00048[140x140x8BPP].png",
+			"type": "image",
+			"name": "00048[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00049[140x140x8BPP].png",
+			"type": "image",
+			"name": "00049[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00050[140x140x8BPP].png",
+			"type": "image",
+			"name": "00050[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00051[140x140x8BPP].png",
+			"type": "image",
+			"name": "00051[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00052[140x140x8BPP].png",
+			"type": "image",
+			"name": "00052[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00053[140x140x8BPP].png",
+			"type": "image",
+			"name": "00053[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00054[140x140x8BPP].png",
+			"type": "image",
+			"name": "00054[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00055[140x140x8BPP].png",
+			"type": "image",
+			"name": "00055[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00056[140x140x8BPP].png",
+			"type": "image",
+			"name": "00056[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00057[140x140x8BPP].png",
+			"type": "image",
+			"name": "00057[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00058[140x140x8BPP].png",
+			"type": "image",
+			"name": "00058[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00059[140x140x8BPP].png",
+			"type": "image",
+			"name": "00059[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00060[140x140x8BPP].png",
+			"type": "image",
+			"name": "00060[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00061[140x140x8BPP].png",
+			"type": "image",
+			"name": "00061[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00062[140x140x8BPP].png",
+			"type": "image",
+			"name": "00062[140x140x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00063[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00063[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00064[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00064[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00065[512x256x8BPP].png",
+			"type": "image",
+			"name": "00065[512x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00066[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00066[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00067[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00067[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00068[512x512x8BPP].png",
+			"type": "image",
+			"name": "00068[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00069[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00069[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00070[256x256x8BPP].png",
+			"type": "image",
+			"name": "00070[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00071[32x32x8BPP].png",
+			"type": "image",
+			"name": "00071[32x32x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00072[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00072[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00073[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00073[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00074[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00074[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00075[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00075[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00076[512x512x8BPP].png",
+			"type": "image",
+			"name": "00076[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00077[512x512x8BPP].png",
+			"type": "image",
+			"name": "00077[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00078[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00078[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00079[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00079[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00080[512x512x8BPP].png",
+			"type": "image",
+			"name": "00080[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00081[512x256x8BPP].png",
+			"type": "image",
+			"name": "00081[512x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00082[512x512x8BPP].png",
+			"type": "image",
+			"name": "00082[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00083[512x512x8BPP].png",
+			"type": "image",
+			"name": "00083[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00084[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00084[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00085[512x512x8BPP].png",
+			"type": "image",
+			"name": "00085[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00086[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00086[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00087[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00087[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00088[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00088[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00089[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00089[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00090[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00090[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00091[128x256x8BPP].png",
+			"type": "image",
+			"name": "00091[128x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00092[128x256x8BPP].png",
+			"type": "image",
+			"name": "00092[128x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00093[512x256x8BPP].png",
+			"type": "image",
+			"name": "00093[512x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00094[256x512x8BPP].png",
+			"type": "image",
+			"name": "00094[256x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00095[512x512x8BPP].png",
+			"type": "image",
+			"name": "00095[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00096[512x512x8BPP].png",
+			"type": "image",
+			"name": "00096[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00097[512x256x8BPP].png",
+			"type": "image",
+			"name": "00097[512x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00098[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00098[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00099[64x512x8BPP].png",
+			"type": "image",
+			"name": "00099[64x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00100[64x512x8BPP].png",
+			"type": "image",
+			"name": "00100[64x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00101[128x128x8BPP].png",
+			"type": "image",
+			"name": "00101[128x128x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00102[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00102[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00103[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00103[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00104[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00104[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00105[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00105[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00106[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00106[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00107[256x256x8BPP].png",
+			"type": "image",
+			"name": "00107[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00108[256x256x8BPP].png",
+			"type": "image",
+			"name": "00108[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00109[256x256x8BPP].png",
+			"type": "image",
+			"name": "00109[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00110[256x256x8BPP].png",
+			"type": "image",
+			"name": "00110[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00111[256x256x8BPP].png",
+			"type": "image",
+			"name": "00111[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00112[256x256x8BPP].png",
+			"type": "image",
+			"name": "00112[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00113[256x256x8BPP].png",
+			"type": "image",
+			"name": "00113[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00114[256x256x8BPP].png",
+			"type": "image",
+			"name": "00114[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00115[256x256x8BPP].png",
+			"type": "image",
+			"name": "00115[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00116[256x256x8BPP].png",
+			"type": "image",
+			"name": "00116[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00117[256x256x8BPP].png",
+			"type": "image",
+			"name": "00117[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00118[256x256x8BPP].png",
+			"type": "image",
+			"name": "00118[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00119[256x256x8BPP].png",
+			"type": "image",
+			"name": "00119[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00120[256x256x8BPP].png",
+			"type": "image",
+			"name": "00120[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00121[256x256x8BPP].png",
+			"type": "image",
+			"name": "00121[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00122[256x256x8BPP].png",
+			"type": "image",
+			"name": "00122[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00123[256x256x8BPP].png",
+			"type": "image",
+			"name": "00123[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00124[256x256x8BPP].png",
+			"type": "image",
+			"name": "00124[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00125[256x256x8BPP].png",
+			"type": "image",
+			"name": "00125[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00126[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00126[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00127[256x256x8BPP].png",
+			"type": "image",
+			"name": "00127[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00128[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00128[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00129[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00129[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00130[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00130[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00131[512x512x8BPP].png",
+			"type": "image",
+			"name": "00131[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00132[512x512x8BPP].png",
+			"type": "image",
+			"name": "00132[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00133[256x128x8BPP].png",
+			"type": "image",
+			"name": "00133[256x128x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00134[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00134[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00135[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00135[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00136[512x512x8BPP].png",
+			"type": "image",
+			"name": "00136[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00137[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00137[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00138[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00138[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00139[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00139[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00140[512x512x8BPP].png",
+			"type": "image",
+			"name": "00140[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00141[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00141[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00142[512x512x8BPP].png",
+			"type": "image",
+			"name": "00142[512x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00143[1024x512x8BPP].png",
+			"type": "image",
+			"name": "00143[1024x512x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00144[1024x1024x8BPP].png",
+			"type": "image",
+			"name": "00144[1024x1024x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00145[256x256x8BPP].png",
+			"type": "image",
+			"name": "00145[256x256x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00146[64x64x8BPP].png",
+			"type": "image",
+			"name": "00146[64x64x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00147[64x64x8BPP].png",
+			"type": "image",
+			"name": "00147[64x64x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00156[72x72x8BPP].png",
+			"type": "image",
+			"name": "00156[72x72x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00157[18x78x8BPP].png",
+			"type": "image",
+			"name": "00157[18x78x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00158[18x78x8BPP].png",
+			"type": "image",
+			"name": "00158[18x78x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00159[18x78x8BPP].png",
+			"type": "image",
+			"name": "00159[18x78x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00160[18x78x8BPP].png",
+			"type": "image",
+			"name": "00160[18x78x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00161[76x76x8BPP].png",
+			"type": "image",
+			"name": "00161[76x76x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00162[72x72x8BPP].png",
+			"type": "image",
+			"name": "00162[72x72x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00163[280x150x8BPP].png",
+			"type": "image",
+			"name": "00163[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00164[280x150x8BPP].png",
+			"type": "image",
+			"name": "00164[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00165[280x150x8BPP].png",
+			"type": "image",
+			"name": "00165[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00166[280x150x8BPP].png",
+			"type": "image",
+			"name": "00166[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00167[280x150x8BPP].png",
+			"type": "image",
+			"name": "00167[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00168[280x150x8BPP].png",
+			"type": "image",
+			"name": "00168[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00169[280x150x8BPP].png",
+			"type": "image",
+			"name": "00169[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00170[280x150x8BPP].png",
+			"type": "image",
+			"name": "00170[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00171[280x150x8BPP].png",
+			"type": "image",
+			"name": "00171[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00172[280x150x8BPP].png",
+			"type": "image",
+			"name": "00172[280x150x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00173[640x960x8BPP].png",
+			"type": "image",
+			"name": "00173[640x960x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00244[72x95x8BPP].png",
+			"type": "image",
+			"name": "00244[72x95x8BPP]_png"
+		},
+		{
+			"url": "assets/game/00245[72x95x8BPP].png",
+			"type": "image",
+			"name": "00245[72x95x8BPP]_png"
 		}
 	]
 }
