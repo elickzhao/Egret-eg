@@ -80,6 +80,14 @@ class ElementView extends egret.Sprite {
 		tw.to({ x: this.targetX(), y: this.targetY() }, this.speed, egret.Ease.cubicInOut);
 	}
 
+	/** 掉落后加到父级显示列表 */
+	public show(wait: number) {
+		var tw: egret.Tween = egret.Tween.get(this);
+		tw.wait(wait, false);
+		tw.call(this.addThisToParent, this);
+		tw.to({ x: this.targetX(), y: this.targetY() }, this.speed, egret.Ease.bounceOut);
+	}
+
 	public targetX(): number {	//目标x轴位置
 		var girdwidth: number = (GameData.stageW - 40) / GameData.MaxColumn;
 		var xx: number = 20 + girdwidth * (this.location % GameData.MaxColumn) + girdwidth / 2 + 5;
