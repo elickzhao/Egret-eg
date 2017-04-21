@@ -79,13 +79,19 @@ class ElementView extends egret.Sprite {
 		var tw: egret.Tween = egret.Tween.get(this);
 		tw.to({ x: this.targetX(), y: this.targetY() }, this.speed, egret.Ease.cubicInOut);
 	}
-
+	/** 显示元素,从上方掉落 */
 	/** 掉落后加到父级显示列表 */
 	public show(wait: number) {
 		var tw: egret.Tween = egret.Tween.get(this);
 		tw.wait(wait, false);
-		tw.call(this.addThisToParent, this);
+		tw.call(this.addThisToParent, this); 
 		tw.to({ x: this.targetX(), y: this.targetY() }, this.speed, egret.Ease.bounceOut);
+	}
+
+	private addThisToParent(){	//添加到父级显示对象
+		if(!this.parent){
+			this.thisparent.addChild(this);
+		}
 	}
 
 	public targetX(): number {	//目标x轴位置
