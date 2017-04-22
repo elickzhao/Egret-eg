@@ -84,12 +84,12 @@ class ElementView extends egret.Sprite {
 	public show(wait: number) {
 		var tw: egret.Tween = egret.Tween.get(this);
 		tw.wait(wait, false);
-		tw.call(this.addThisToParent, this); 
+		tw.call(this.addThisToParent, this);
 		tw.to({ x: this.targetX(), y: this.targetY() }, this.speed, egret.Ease.bounceOut);
 	}
 
-	private addThisToParent(){	//添加到父级显示对象
-		if(!this.parent){
+	private addThisToParent() {	//添加到父级显示对象
+		if (!this.parent) {
 			this.thisparent.addChild(this);
 		}
 	}
@@ -104,6 +104,25 @@ class ElementView extends egret.Sprite {
 		var startY: number = (GameData.stageH - (GameData.stageW - 30) / 6 - 60) - girdwidth * GameData.MaxColumn;
 		var yy: number = startY + girdwidth * (Math.floor(this.location / 8)) + girdwidth / 2 + 5;
 		return yy;
+	}
+
+	/** 移动并且返回 */
+	public moveAndBack(location: number, isscale: boolean = false) {
+		var girdwidth: number = (GameData.stageW - 40) / GameData.MaxColumn;
+		var xx: number = 20 + girdwidth * (location % GameData.MaxColumn) + girdwidth / 2 + 5;
+		var startY:number = (GameData.stageH-(GameData.stageW-30)/6-60) - girdwidth * GameData.MaxColumn;
+		var yy:number = startY + girdwidth*(Math.floor(location/8))+girdwidth/2+5;
+		var tw:egret.Tween = egret.Tween.get(this);
+		if(isscale){
+			tw.to({x:xx,y:yy,scaleX:1.2,scaleY:1.2},300,egret.Ease.cubicOut).call(this.back,this);
+		}else{
+			tw.to({x:xx,y:yy,scaleX:0.8,scaleY:0.8},300,egret.Ease.cubicOut).call(this.back,this);
+		}
+	}
+
+	private back(){
+		var tw:egret.Tween = egret.Tween.get(this);
+		tw.to({x:this.targetX,y:this.targetY,scaleX:1,scaleY:1},300,egret.Ease.cubicOut);
 	}
 
 }
