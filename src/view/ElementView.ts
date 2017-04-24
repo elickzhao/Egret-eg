@@ -105,7 +105,7 @@ class ElementView extends egret.Sprite {
 		var yy: number = startY + girdwidth * (Math.floor(this.location / 8)) + girdwidth / 2 + 5;
 		return yy;
 	}
-
+	/**							此动画用于移动元素,然后消除								 */
 	/** 移动并且返回 */
 	public moveAndBack(location: number, isscale: boolean = false) {
 		var girdwidth: number = (GameData.stageW - 40) / GameData.MaxColumn;
@@ -114,15 +114,35 @@ class ElementView extends egret.Sprite {
 		var yy:number = startY + girdwidth*(Math.floor(location/8))+girdwidth/2+5;
 		var tw:egret.Tween = egret.Tween.get(this);
 		if(isscale){
-			tw.to({x:xx,y:yy,scaleX:1.2,scaleY:1.2},300,egret.Ease.cubicOut).call(this.back,this);
+			tw.to({x:xx,y:yy,scaleX:1.2,scaleY:1.2},300,egret.Ease.cubicOut).call(this.backScale,this);
 		}else{
-			tw.to({x:xx,y:yy,scaleX:0.8,scaleY:0.8},300,egret.Ease.cubicOut).call(this.back,this);
+			tw.to({x:xx,y:yy,scaleX:0.8,scaleY:0.8},300,egret.Ease.cubicOut).call(this.backScale,this);
 		}
 	}
 
-	private back(){
+	private backScale(){
 		var tw:egret.Tween = egret.Tween.get(this);
 		tw.to({x:this.targetX,y:this.targetY,scaleX:1,scaleY:1},300,egret.Ease.cubicOut);
+	}
+
+	private canRemove(){
+		var evt:ElementViewManageEvent = new ElementViewManageEvent(ElementViewManageEvent.REMOVE_ANIMATION_OVER);
+		this.dispatchEvent(evt);
+	}
+
+
+	/**此动画用于将元素移动到关卡记分器位置,然后显示列表 */
+	//播放动画
+	public playCurveMove(tx:number,ty:number){
+		var tw:egret.Tween = egret.Tween.get(this);
+		tw.to({x:tx,y:ty},700,egret.Ease.quadOut).call(this.overCurveMove);
+	}
+	private overCurveMove(){
+		if(this.parent){
+			this.parent.removeChild(this);
+		}
+		var evt:ElementViewManageEvent = new ElementViewManageEvent(ElementViewManageEvent.UPDATE_MAP);
+		this.dispatchEvent(evt);
 	}
 
 }
