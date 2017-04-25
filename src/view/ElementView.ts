@@ -145,4 +145,17 @@ class ElementView extends egret.Sprite {
 		this.dispatchEvent(evt);
 	}
 
+	/** 删除元素 */
+	public playRemoveAni(){
+		var tw:egret.Tween = egret.Tween.get(this);
+		tw.to({scaleX:1.4,scaleY:1.4},300,egret.Ease.cubicInOut).to({scaleX:0.1,scaleY:0.1},300,egret.Ease.cubicInOut).call(this.removeAniCall);
+	}
+	private removeAniCall(){
+		if(this.parent){
+			this.parent.removeChild(this);
+		}
+		var evt:ElementViewManageEvent = new ElementViewManageEvent(ElementViewManageEvent.UPDATE_MAP);
+		this.dispatchEvent(evt);
+	}
+
 }
