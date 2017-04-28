@@ -158,4 +158,24 @@ class ElementView extends egret.Sprite {
 		this.dispatchEvent(evt);
 	}
 
+	/** 移动到新位置 方块被消除后重新生成下落使用 */
+	//根据列编号,重新计算元素X轴位置,从起始Y轴开始播放下落动画
+	public moveNewLocation(){
+		if(!this.parent){
+			var girdwidth:number = (GameData.stageW - 40)/GameData.MaxColumn;
+			var startY: number = (GameData.stageH - (GameData.stageW -30)/6 -60) -girdwidth * GameData.MaxColumn;
+			this.y = startY - this.width;
+			this.x = this.targetX();
+			this.scaleX = 1;
+			this.scaleY = 1;
+			this.thisparent.addChild(this);
+		}	
+		egret.Tween.get(this).to({x:this.targetX(),y:this.targetY()},this.speed,egret.Ease.bounceOut).call(this.moveNewLocationOver);
+	}
+
+	private moveNewLocationOver(){
+		var evt: ElementViewManageEvent = new ElementViewManageEvent(ElementViewManageEvent.UPDATE_VIEW_OVER);
+		this.dispatchEvent(evt);
+	}
+
 }
