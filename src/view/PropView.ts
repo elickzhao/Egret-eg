@@ -1,19 +1,24 @@
 class PropView extends egret.Sprite {
 	public constructor(type: number) {
 		super();
-		this._type = type;
+		this._type = type;	//道具类型
 		this.init();
 	}
 
 	//道具元素界面
-	private _view_box: egret.Bitmap;
-	private _view_activate: egret.Bitmap;
-	private _numText: egret.BitmapText;
-	private _type = -1;
+	private _view_box: egret.Bitmap;		//道具盒子
+	private _view_activate: egret.Bitmap;	//激活道具图像
+	private _numText: egret.BitmapText;		//数字文本
+	private _type = -1;						//道具类型
 	public id: number = -1;
 
 	private init() {
-		//this.crea
+		this.createviewe();
+		this.createNumText();
+		this.addChild(this._view_activate);
+		this.addChild(this._view_box);
+		this.addChild(this._numText);
+		this.setActivateState(true);	//设置激活状态
 	}
 
 	private createNumText() {
@@ -22,6 +27,7 @@ class PropView extends egret.Sprite {
 		this._numText.x = this._view_activate.width - 31;
 	}
 
+	//创建道具盒子 把道具都显示在这个上
 	private createviewe() {
 		var _interval: number = -15;
 		var _width: number = (GameData.stageW - _interval * 6) / 5;
@@ -51,28 +57,29 @@ class PropView extends egret.Sprite {
 		this._num = val;
 		this._numText.text = val.toString();
 		if (val < 0) {
-			this.setActivatetexture(false);
+			this.setActivateState(false);
 		} else {
-			this.setActivatetexture(true);
+			this.setActivateState(true);
 		}
 	}
 
-	private setActivatetexture(val: boolean) {
+	private setActivateState(val: boolean) {
 		this.touchEnabled = val;
 		if (val) {
 			this._view_activate.texture = RES.getRes(this.getActivateTexture(this._type));
 			this._view_box.texture = RES.getRes("propbox_png");
 			this._numText.font = RES.getRes("number_fnt");
-		} else {
+		} else {	//激活之前默认为不可点击
 			this._view_activate.texture = RES.getRes(this.getDisableTexture(this._type));
 			this._view_box.texture = RES.getRes("propboxdisable_png");
 			this._numText.font = RES.getRes("numberdisable_fnt");
 		}
 	}
 
-	private getActivateTexture(type:number):string {
-		var textturename:string = "";
-		switch(type){
+	//不同道具 不同显示图片
+	private getActivateTexture(type: number): string {
+		var textturename: string = "";
+		switch (type) {
 			case 0:
 				textturename = "tongse_png";
 				break;
@@ -91,9 +98,9 @@ class PropView extends egret.Sprite {
 		}
 		return textturename;
 	}
-	private getDisableTexture(type:number):string {
-		var textturename:string = "";
-		switch(type){
+	private getDisableTexture(type: number): string {
+		var textturename: string = "";
+		switch (type) {
 			case 0:
 				textturename = "tongsedisable_png";
 				break;
@@ -113,12 +120,13 @@ class PropView extends egret.Sprite {
 		return textturename;
 	}
 
-	public setFocus(val:boolean){
-		if(val){
+	//焦点图片 给激活道具套在里面 显示当前使用的道具
+	public setFocus(val: boolean) {
+		if (val) {
 			this._view_box.texture = RES.getRes("propboxactive_png");
-		}else{
+		} else {
 			this._view_box.texture = RES.getRes("propbox_png");
 		}
 	}
-	
+
 }
