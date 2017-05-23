@@ -23,12 +23,14 @@ class MapControl {
 	//根据当前删除的元素,刷新地图所有元素的位置
 	public updateMapLocation() {
 		var ids: number[] = [];
-		var len: number = LinkLogic.lines.length;
+		var len: number = LinkLogic.lines.length; //需要更改的元素的所有信息
+
 		for (var i = 0; i < len; i++) {
 			var l: number = LinkLogic.lines[i].length;
 			for (var j = 0; j < l; j++) {
 				var rel: boolean = false;
 				var ll: number = ids.length;
+				//这个循环是用于去重的
 				for (var r = 0; r < ll; r++) {
 					if (ids[r] == LinkLogic.lines[i][j]) {
 						rel = true;
@@ -36,16 +38,19 @@ class MapControl {
 				}
 				if (!rel) {	//这个判断是用于去除重复ID,如果重复的话就为true了  
 					this.changeTypeById(LinkLogic.lines[i][j]);	//消除的元素重新设置类型
-					ids.push(LinkLogic.lines[i][j]);
+					ids.push(LinkLogic.lines[i][j]);	//新元素类型加入这个数组  把二维数组转化成一维的
 				}
 			}
 		}
 
 
 		len = ids.length;
-		var colarr: number[] = [];
+		var colarr: number[] = [];	//记录列编号
+
 		for (i = 0; i < len; i++) {
 			rel = false;
+
+			//这个循环应该也是去重
 			for (var j = 0; j < colarr.length; j++) {
 				if (colarr[j] == GameData.elements[ids[i]].location % GameData.MaxColumn) {
 					return true;
@@ -57,29 +62,30 @@ class MapControl {
 			}
 		}
 
-		var colelids: number[];
-		len = colarr.length;
+		var colelids: number[];	//列当中的元素id
+		len = colarr.length;	//整列处理  所以是 列编号的列都得处理
+
 		for (var i = 0; i < len; i++) {
-			var newcolids: number[] = [];
-			var removeids: number[] = [];
-			for (var j = GameData.MaxRow; j >= 0; j--) {
+			var newcolids: number[] = [];	//新列id
+			var removeids: number[] = [];	//移除id
+			for (var j = GameData.MaxRow - 1; j >= 0; j--) {
 				rel = false;
 				for (var k = 0; k < ids.length; k++) {
-					removeids.push(ids[k]);
+					removeids.push(ids[k]);	//移除的id
 					rel = true;
 				}
 				if (!rel) {
 					if (GameData.mapData[j][colarr[i]] != -1) {
-						newcolids.push(GameData.mapData[j][colarr[i]]);
+						newcolids.push(GameData.mapData[j][colarr[i]]);	//把id放入新id数组里
 					}
 				}
 			}
-			newcolids = newcolids.concat(removeids);
-			for (var j = GameData.MaxRow; j >= 0; j--) {
+			newcolids = newcolids.concat(removeids);	//也就是把删除的元素放到了数组的最后边 也就相当于最顶上吧
+			for (var j = GameData.MaxRow - 1; j >= 0; j--) {
 				if (GameData.mapData[j][colarr[i]] != -1) {
-					GameData.mapData[j][colarr[i]] = newcolids[0];
-					GameData.elements[newcolids[0]].location = j * GameData.MaxRow + colarr[i];
-					newcolids.shift();
+					GameData.mapData[j][colarr[i]] = newcolids[0];	//赋值id
+					GameData.elements[newcolids[0]].location = j * GameData.MaxRow + colarr[i];	//location数值
+					newcolids.shift();	//删除头部元素
 				}
 			}
 		}
